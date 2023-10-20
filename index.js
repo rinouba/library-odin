@@ -56,8 +56,8 @@ function displayBooks() {
         <div class="removeelem" id="removeElemnet">Remove!</div>
     `;
     bookList.appendChild(li);
-    toggleReadOrNot();
   });
+  toggleReadOrNot();
   removeElem();
 }
 
@@ -72,17 +72,19 @@ const showPopUpForm = () => {
 // Toggle Read button
 
 const toggleReadOrNot = () => {
-  const checkif = document.querySelector("#checkif");
-  checkif.addEventListener("click", (e) => {
-    if (e.target.classList.contains("read")) {
-      e.target.classList.add("notReading");
-      e.target.classList.remove("read");
-      e.target.innerText = "Not Read";
-    } else {
-      e.target.classList.add("read");
-      e.target.classList.remove("notReading");
-      e.target.innerText = "Read";
-    }
+  const checkif = document.querySelectorAll(".check");
+  checkif.forEach(item => {
+    item.addEventListener("click", (e) => {
+      if (e.target.classList.contains("read")) {
+        e.target.classList.add("notReading");
+        e.target.classList.remove("read");
+        e.target.innerText = "Not Read";
+      } else {
+        e.target.classList.add("read");
+        e.target.classList.remove("notReading");
+        e.target.innerText = "Read";
+      }
+    });
   });
 };
 
