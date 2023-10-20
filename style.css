@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+:root {
+  --background-nav: #313866;
+  --background-section: #fe7be5;
+  --background-card: #504099;
+  --color: #974ec3;
+}
+
+/* 
+===================
+ Library
+===================
+*/
+
+nav {
+  background-color: var(--background-nav);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.btn {
+  all: unset;
+  background-color: var(--background-section);
+  padding: 10px 50px;
+  font-size: 1.2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: var(--background-nav);
+}
+
+.btn:hover {
+  background-color: var(--color);
+  color: var(--background-card);
+  transform: rotate(10deg);
+}
+
+.btn:active {
+  transform: rotate(-10deg);
+}
+
+body {
+  background-color: var(--background-section);
+}
+
+.section {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+/*
+=========
+ cards
+=========
+*/
+
+.card {
+  position: relative;
+  background-color: var(--background-card);
+  width: 300px;
+  height: 100px;
+  text-align: left;
+  padding: 20px 0 10rem 50px;
+  border-radius: 9px;
+  transition: 0.5s;
+  margin: 20px;
+}
+
+.card:hover {
+  background-color: var(--color);
+  transform: rotateZ(5deg);
+}
+.card h1 {
+  color: var(--background-section);
+  margin: 10px 0;
+}
+
+.card h2 {
+  margin: 10px 0;
+  color: var(--background-nav);
+}
+
+#checkif {
+  width: 200px;
+  padding: 10px 0;
+  border-radius: 13px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer !important;
+}
+
+.read {
+  background-color: rgb(128, 247, 128);
+}
+.notReading {
+  background-color: rgb(247, 128, 128);
+}
+
+.removeelem {
+  position: absolute;
+  background-color: rgb(247, 128, 128);
+  font-weight: bold;
+  right: 20px;
+  top: 20px;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form {
+  position: fixed;
+  background-color: var(--background-card);
+  top: 10;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  padding: 30px;
+  border-radius: 13px;
+  font-size: 1.5rem;
+  color: var(--background-section);
+  transition: all 0.5s;
+  z-index: 10;
+  display: none;
+}
+
+form input[type="text"] {
+  all: unset;
+  background-color: var(--background-nav);
+  border-radius: 9px;
+  padding: 10px;
+}
+form input[type="number"] {
+  all: unset;
+  background-color: var(--background-nav);
+  border-radius: 9px;
+  padding: 10px;
+}
+
+form input[type="checkbox"] {
+  background-color: var(--color);
+  width: 50px;
+  height: 50px;
+}
+
+form input[type="submit"] {
+  all: unset;
+  background-color: var(--background-nav);
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+form input[type="submit"]:hover {
+  transform: scale(1.2);
+}
+form input[type="submit"]:active {
+  transform: scale(1);
+}
+
+#book-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+#add-book-form {
+  opacity: 0;
+}
